@@ -2,3 +2,28 @@
   transition-property: color;
   transition-duration: 0.7s;
 }
+
+
+.linkImage {
+  transition-property: height;
+  transition-duration: 0.7s;
+}
+
+.imageStack {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.backImage {
+  position: relative;
+  top: 0;
+  left: 0;
+  border: 1px red solid;
+}
+.linkImage {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  border: 1px green solid;
+  transform: translateX(-50%) translateY(-50%);
+}
