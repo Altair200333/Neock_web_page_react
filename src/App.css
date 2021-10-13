@@ -18,13 +18,11 @@
   position: relative;
   top: 2px;
   left: 0;
-  border: 1px red solid;
 }
 .linkImage {
   position: absolute;
   top: 50%;
   left: 50%;
-  border: 1px green solid;
   transform: translateX(-50%) translateY(-50%);
 }
 
