@@ -6,14 +6,15 @@ import './App.css';
 function ImageLink(props)
 {
   const [hower, setHower] = useState(0);
-
+  var baseW = "70px";
+  var scaledW = "50px";
   return (
     <div  className="imageStack">
-      <a href={props.link}>
-        <img className="backImage" src='./back.png' style={{height:"100px"}}/>
+      <a href={props.link} onMouseEnter ={() => {setHower(1)}} onMouseLeave={()=>{setHower(0)}}>
+        <img className="backImage" src='./back.png' style={{height:baseW}}/>
 
-        <img className="linkImage" src = {props.src} style={{height:hower==0?"100px":"80px"}}
-            onMouseEnter ={() => {setHower(1)}} onMouseLeave={()=>{setHower(0)}}></img>
+        <img className="linkImage" src = {props.src} style={{height:hower==0?baseW:scaledW}}
+            ></img>
       </a>
     </div>);
 }
@@ -23,9 +24,17 @@ function LinksRow(props)
   var items = [
     {src: './in.png', link:'https://www.instagram.com/'}, 
     {src: './fb.png', link:'https://www.facebook.com'},
+    {src: './gh.png', link:'https://github.com/Altair200333'},
+
   ];
 
-  return items.map(item => (<ImageLink src={item.src} link={item.link}/>));
+  return (
+    <table align="center">
+        <tr>
+          {items.map(item => (<td><ImageLink src={item.src} link={item.link}/></td>))}
+        </tr>
+    </table>
+    );
 }
 
 function UI()
