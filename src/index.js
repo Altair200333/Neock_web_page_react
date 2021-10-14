@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import {Component} from 'react';
 import './App.css';
+//https://www.npmjs.com/package/react-toggle
 
 function ImageLink(props)
 {
@@ -23,23 +24,55 @@ function LinksRow(props)
 {
   var items = [
     {src: './in.png', link:'https://www.instagram.com/'}, 
-    {src: './fb.png', link:'https://www.facebook.com'},
+    {src: './tv.png', link:'https://www.twitter.com'},
     {src: './gh.png', link:'https://github.com/Altair200333'},
 
   ];
 
   return (
-    <table align="center" cellspacing="2" cellpadding="2" >
-        <tr>
-          <td style={{color: "#575959"}}><h2>Altair 200333 &nbsp; </h2></td>
-          {items.map(item => (<td><ImageLink src={item.src} link={item.link}/></td>))}
-        </tr>
+    <table align="center" cellPadding="2" >
+        <tbody>
+          <tr>
+            <td><h2 style={{ fontFamily: 'Courier New' }}>Altair 200333 &nbsp; </h2></td>
+            {items.map(item => (<td key={item.link}><ImageLink src={item.src} link={item.link}/></td>))}
+          </tr>
+        </tbody>
+
     </table>
     );
 }
+
+function PostLink(props)
+{
+  const [hower, setHower] = useState(0);
+
+  return (  
+      <div onMouseEnter ={() => {setHower(1)}} onMouseLeave={()=>{setHower(0)}} style={{backgroundColor:'wheat'}}>
+        <div style={{height:"20px"}}>
+          <a href = {props.info.link} className="scaleText" style={{fontSize: 20 + hower * 5}}>{props.info.text}</a>
+        </div>
+        <p>{props.info.short}</p>
+      </div>);
+}
 function PostsLinks(props)
 {
-  return (<h1>Kurwa</h1>);
+  var posts = [
+    {text: 'Post #1', short:"nope", link:'#'}, 
+    {text: 'Post #2', short:"yep", link:'#'},
+    {text: 'Post #3', short:"meow", link:'#'},
+
+  ];
+
+  return (
+    <div>
+    <h1 style={{ fontFamily: 'Courier New' }}>Posts</h1>
+    <table cellPadding="2" >
+      <tbody>
+          {posts.map(item => (<tr key={item.text}><td><PostLink info={item}/></td></tr>))}
+      </tbody>
+    </table>
+    </div>
+  );
 }
 
 function UI()
