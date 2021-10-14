@@ -14,7 +14,7 @@ function ImageLink(props)
   return (
     <div  className="imageStack">
       <a href={props.link} onMouseEnter ={() => {setHower(1)}} onMouseLeave={()=>{setHower(0)}}>
-        <img className="backImage" src='./back.png' style={{height:baseW}}/>
+        <img className="backImage" src='./none.png' style={{height:baseW}}/>
 
         <img className="linkImage" src = {props.src} style={{height:hower==0?baseW:scaledW}}
             ></img>
@@ -25,10 +25,10 @@ function ImageLink(props)
 function LinksRow(props)
 {
   var items = [
-    {src: './in.png', link:'https://www.instagram.com/'}, 
-    {src: './tv.png', link:'https://www.twitter.com'},
-    {src: './gh.png', link:'https://github.com/Altair200333'},
-
+    {src: './github.svg', link:'https://github.com/Altair200333'}, 
+    {src: './twitter.svg', link:'https://twitter.com/Dr_Mihael_'},
+    {src: './vk.svg', link:'https://vk.com/petrmp'},
+    {src: './instagram.svg', link:'https://www.instagram.com/_neo_mp_/'},
   ];
 
   return (
