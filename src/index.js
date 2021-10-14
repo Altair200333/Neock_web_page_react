@@ -8,7 +8,8 @@ import UI from './main';
 import Page1 from './page1';
 import Page2 from './page2';
 
-import routes from './routes';
+import Routes from './routes';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -18,32 +19,14 @@ import {
 
 //https://www.npmjs.com/package/react-toggle
 
+
 function CenterAll()
 {
   return (
   <div style= {{display: 'flex', alignItems: 'center', justifyContent: 'center', }}>
-    <UI/>
+    <Routes/>
   </div>)
 }
 
-function App() {
-  return (
-    <Router>
-      
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-        <Switch>
-          <Route path="/about">
-            <Page2/>
-          </Route>
-          <Route path="/users">
-            <Page1/>
-          </Route>
-          <Route path="/">
-            <UI />
-          </Route>
-        </Switch>
-    </Router>
-  );
-}
-ReactDOM.render(<App/>, document.getElementById('root'));
+
+ReactDOM.render(<CenterAll/>, document.getElementById('root'));

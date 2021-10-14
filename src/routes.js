@@ -12,10 +12,22 @@ import UI from './main';
 import Page1 from './page1';
 import Page2 from './page2';
 
-/**
- * All routes go here.
- * Don't forget to import the components above after adding new route.
- */
-export default (
-    <h1>w</h1>
-);
+function Routes() {
+  return (
+    <Router>
+        <Switch>
+          <Route path="/page2">
+            <Page2/>
+          </Route>
+          <Route path="/page1">
+            <Page1/>
+          </Route>
+          <Route path="/">
+            <UI />
+          </Route>
+        </Switch>
+    </Router>
+  );
+}
+
+export default Routes;
