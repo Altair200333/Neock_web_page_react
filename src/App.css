@@ -6,13 +6,13 @@
 
 .linkImage {
   transition-property: height;
-  transition-duration: 0.7s;
+  transition-duration: 0.5s;
 }
 
 
 .scaleText {
   transition-property: font-size;
-  transition-duration: 0.2s;
+  transition-duration: 0.1s;
 }
 
 .imageStack {
@@ -35,4 +35,9 @@
 .center {
   margin-left: auto;
   margin-right: auto;
+}
+
+a{
+  text-decoration:none;
+  font-weight: bold;
 }

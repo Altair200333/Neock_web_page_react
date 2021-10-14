@@ -33,7 +33,7 @@ function LinksRow(props)
     <table align="center" cellPadding="2" >
         <tbody>
           <tr>
-            <td><h2 style={{ fontFamily: 'Courier New' }}>Altair 200333 &nbsp; </h2></td>
+            <td><h2 style={{ fontFamily: 'Courier New' }}>Name&nbsp; </h2></td>
             {items.map(item => (<td key={item.link}><ImageLink src={item.src} link={item.link}/></td>))}
           </tr>
         </tbody>
@@ -47,9 +47,9 @@ function PostLink(props)
   const [hower, setHower] = useState(0);
 
   return (  
-      <div onMouseEnter ={() => {setHower(1)}} onMouseLeave={()=>{setHower(0)}} style={{backgroundColor:'wheat'}}>
+      <div onMouseEnter ={() => {setHower(1)}} onMouseLeave={()=>{setHower(0)}}>
         <div style={{height:"20px"}}>
-          <a href = {props.info.link} className="scaleText" style={{fontSize: 20 + hower * 5}}>{props.info.text}</a>
+          <a href = {props.info.link} className="scaleText" style={{fontSize: 20 + hower * 5, color:'#9b00de'}}>{props.info.text}</a>
         </div>
         <p>{props.info.short}</p>
       </div>);
@@ -58,7 +58,7 @@ function PostsLinks(props)
 {
   var posts = [
     {text: 'Post #1', short:"nope", link:'#'}, 
-    {text: 'Post #2', short:"yep", link:'#'},
+    {text: 'Post #2', short:"yep ", link:'#'},
     {text: 'Post #3', short:"meow", link:'#'},
 
   ];
@@ -82,11 +82,6 @@ function UI()
     <div>
       <LinksRow/>
       <PostsLinks/>
-      <p>Text {count}</p>
-      <p className='color' onMouseEnter ={() => {setCount(count + 1)}} onMouseLeave={()=>{setCount(count - 1)}} 
-                    style={{color: count==1?"red":"gray"}}>
-        Btn
-      </p>
     </div>
   )
 }
