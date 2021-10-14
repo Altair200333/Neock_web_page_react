@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import {Component} from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import './App.css';
 //https://www.npmjs.com/package/react-toggle
 
@@ -42,6 +44,11 @@ function LinksRow(props)
     );
 }
 
+function Tag(props)
+{
+  return (<div style={{color:'white', backgroundColor:'#9b00de', padding: '4px', borderRadius: '5px'}}>{props.tag}</div>)
+}
+
 function PostLink(props)
 {
   const [hower, setHower] = useState(0);
@@ -51,15 +58,25 @@ function PostLink(props)
         <div style={{height:"20px"}}>
           <a href = {props.info.link} className="scaleText" style={{fontSize: 20 + hower * 5, color:'#9b00de'}}>{props.info.text}</a>
         </div>
+        
+        <p></p>
+
+        <table cellPadding="2">
+          <tbody>
+            <tr>
+              {props.info.tags.map(item => (<td key={item}><Tag tag={item}/></td>))}
+            </tr>
+          </tbody>
+        </table>
         <p>{props.info.short}</p>
       </div>);
 }
 function PostsLinks(props)
 {
   var posts = [
-    {text: 'Post #1', short:"nope", link:'#'}, 
-    {text: 'Post #2', short:"yep ", link:'#'},
-    {text: 'Post #3', short:"meow", link:'#'},
+    {text: 'What is Lorem Ipsum?', short:"Lorem Ipsum is simply dummy text of the printing and typesetting", link:'#', tags: ['box', 'cat', 'kurwa']}, 
+    {text: 'Where does it come from?', short:"Contrary to popular belief, Lorem Ipsum is not simply random text ", link:'#', tags: ['duck', 'mouse', 'rat']},
+    {text: 'Why do we use it?', short:"There are many variations of passages of Lorem Ipsum available", link:'#', tags: ['game', 'vr', 'cd']},
 
   ];
 
@@ -68,7 +85,10 @@ function PostsLinks(props)
     <h1 style={{ fontFamily: 'Courier New' }}>Posts</h1>
     <table cellPadding="2" >
       <tbody>
-          {posts.map(item => (<tr key={item.text}><td><PostLink info={item}/></td></tr>))}
+          {posts.map(item => (
+            <tr key={item.text}>
+                  <td><PostLink info={item}/></td>
+            </tr>))}
       </tbody>
     </table>
     </div>
@@ -82,6 +102,7 @@ function UI()
     <div>
       <LinksRow/>
       <PostsLinks/>
+      
     </div>
   )
 }
