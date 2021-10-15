@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './App.css';
+import '../App.css';
 
-function Page2()
+function Mixer3D()
 {
     return (<h1>PAGE2</h1>)
 }
-export default Page2;
+export default Mixer3D;

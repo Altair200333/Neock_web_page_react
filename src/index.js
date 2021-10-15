@@ -4,9 +4,7 @@ import {Component} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import './App.css';
-import UI from './main';
-import Page1 from './page1';
-import Page2 from './page2';
+
 import Header from './header'
 
 import Routes from './routes';

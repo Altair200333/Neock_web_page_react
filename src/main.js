@@ -9,7 +9,7 @@ function Tag(props)
   const [hower, setHower] = useState(0);
 
   return (
-    <button className='tagBtn' style={{color:'white', backgroundColor:'#9b00de', padding: hower==0?'4px':'7px', borderRadius: '5px', fontWeight: 'bold'}}
+    <button className='tagBtn' style={{color:'white', backgroundColor:'#d14fff', padding: hower==0?'4px':'7px', borderRadius: '5px', fontWeight: 'bold'}}
       onMouseEnter ={() => {setHower(1)}} onMouseLeave={()=>{setHower(0)}}>
       {props.tag}
     </button>)
@@ -41,9 +41,9 @@ function PostLink(props)
 function PostsLinks(props)
 {
   var posts = [
-    {text: 'What is Lorem Ipsum?', short:"Lorem Ipsum is simply dummy text of the printing and typesetting", link:'/page1', tags: ['box', 'cat', 'kurwa']}, 
-    {text: 'Where does it come from?', short:"Contrary to popular belief, Lorem Ipsum is not simply random text ", link:'/page2', tags: ['duck', 'mouse', 'rat']},
-    {text: 'Why do we use it?', short:"There are many variations of passages of Lorem Ipsum available", link:'/page2', tags: ['game', 'vr', 'cd']},
+    {text: 'Realtime voxel raytracer', short:"Realtime GPU voxel raytracing engine", link:'/voxel_ray', tags: ['C++', 'OpenGL', 'Raytracing']}, 
+    {text: 'Mixer 3D', short:"3D engine with raytracing written in C++ and OpenGL", link:'/mixer_3d', tags: ['C++', 'OpenGL', 'Raytracing']},
+    {text: 'Simple 3D engine', short:"Simple 3D engine built only with SDL", link:'/old_mixer', tags: ['C++','SDL', '3D engine']},
 
   ];
 
@@ -66,7 +66,7 @@ function UI()
 {
   const [count, setCount] = useState(0);
   return (
-    <div>
+    <div style={{width:'400px'}}>
       <PostsLinks/>
       
     </div>
