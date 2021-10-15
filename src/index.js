@@ -26,8 +26,11 @@ function CenterAll(props)
     {props.data}
   </div>)
 }
+
 function MainPage()
 {
+  document.title = "Mike Petrenko"
+  
   return (
   <div>
     <CenterAll data={<Header/>}/>
