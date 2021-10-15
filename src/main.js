@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-
+import Header from './header'
 import {
     Link
   } from "react-router-dom";
@@ -9,7 +9,7 @@ function ImageLink(props)
 {
   const [hower, setHower] = useState(0);
   var baseW = "40px";
-  var scaledW = "30px";
+  var scaledW = "25px";
   return (
     <div  className="imageStack">
       <a href={props.link} onMouseEnter ={() => {setHower(1)}} onMouseLeave={()=>{setHower(0)}}>
@@ -19,28 +19,6 @@ function ImageLink(props)
             ></img>
       </a>
     </div>);
-}
-
-function LinksRow(props)
-{
-  var items = [
-    {src: './github.svg', link:'https://github.com/Altair200333'}, 
-    {src: './twitter.svg', link:'https://twitter.com/Dr_Mihael_'},
-    {src: './vk.svg', link:'https://vk.com/petrmp'},
-    {src: './instagram.svg', link:'https://www.instagram.com/_neo_mp_/'},
-  ];
-
-  return (
-    <table align="center" cellPadding="10" >
-        <tbody>
-          <tr>
-            <td><h2 style={{ fontFamily: 'Courier New' }}>Name&nbsp; </h2></td>
-            {items.map(item => (<td key={item.link}><ImageLink src={item.src} link={item.link}/></td>))}
-          </tr>
-        </tbody>
-
-    </table>
-    );
 }
 
 function Tag(props)
@@ -100,7 +78,7 @@ function UI()
   const [count, setCount] = useState(0);
   return (
     <div>
-      <LinksRow/>
+      <Header/>
       <PostsLinks/>
       
     </div>
