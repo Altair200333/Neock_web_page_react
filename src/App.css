@@ -13,6 +13,9 @@
 .scaleText {
   transition-property: font-size;
   transition-duration: 0.2s;
+
+  font-family: 'Courier New' 
+
 }
 .tagBtn {
   transition-property: padding;
@@ -48,4 +51,10 @@ a{
 
 .tagBtn {
   border: 0px solid transparent;
+}
+
+.description{
+  font-size: 1.1em;
+    
+  font-family: 'Courier New' 
 }
