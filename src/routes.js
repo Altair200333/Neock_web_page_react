@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    BrowserRouter as Router,
+    HashRouter as Router,
     Switch,
     Route,
     Link
@@ -16,13 +16,13 @@ function Routes() {
   return (
     <Router>
         <Switch>
-          <Route path="/page2">
+          <Route path='/page2'>
             <Page2/>
           </Route>
-          <Route path="/page1">
+          <Route path='/page1'>
             <Page1/>
           </Route>
-          <Route path="/">
+          <Route path=''>
             <UI />
           </Route>
         </Switch>
