@@ -7,6 +7,7 @@ import './App.css';
 import UI from './main';
 import Page1 from './page1';
 import Page2 from './page2';
+import Header from './header'
 
 import Routes from './routes';
 
@@ -20,13 +21,21 @@ import {
 //https://www.npmjs.com/package/react-toggle
 
 
-function CenterAll()
+function CenterAll(props)
 {
   return (
-  <div style= {{display: 'flex', alignItems: 'center', justifyContent: 'center', }}>
-    <Routes/>
+  <div style= {{display: 'flex', alignItems: 'center', justifyContent: 'center', }}> 
+    {props.data}
+  </div>)
+}
+function MainPage()
+{
+  return (
+  <div>
+    <CenterAll data={<Header/>}/>
+
+    <CenterAll data={<Routes/>}/>
   </div>)
 }
 
-
-ReactDOM.render(<CenterAll/>, document.getElementById('root'));
+ReactDOM.render(<MainPage/>, document.getElementById('root'));

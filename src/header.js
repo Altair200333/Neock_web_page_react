@@ -29,10 +29,10 @@ function Header(props)
   ];
 
   return (
-    <table align="center" cellPadding="10" style={{width: "500px"}} >
+    <table align="center" cellPadding="10" style={{width: "400px"}} >
         <tbody>
           <tr>
-            <td><h2 style={{ fontFamily: 'Courier New' }}>Name&nbsp; </h2></td>
+            <td><h2 style={{ fontFamily: 'Courier New' }}>Ne0ck&nbsp; </h2></td>
             {items.map(item => (<td key={item.link}><ImageLink src={item.src} link={item.link}/></td>))}
           </tr>
         </tbody>
