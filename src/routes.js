@@ -9,31 +9,15 @@ import {
  * Import all page components here
  */
 import UI from './main';
-import VoxelRay from './posts/voxel_ray';
-import Mixer3D from './posts/mixer_3d';
-import OldMixer from './posts/old_mixer';
-import VoxelMixer from './posts/voxel_mixer';
-import WeatherNSU from './posts/weather_nsu';
+
+import pages from './pages'
 
 function Routes() {
   return (
     <Router>
         <Switch>
-          <Route path='/weather_nsu'>
-            <WeatherNSU/>
-          </Route>
-          <Route path='/voxel_mixer'>
-            <VoxelMixer/>
-          </Route>
-          <Route path='/voxel_ray'>
-            <VoxelRay/>
-          </Route>
-          <Route path='/mixer_3d'>
-            <Mixer3D/>
-          </Route>
-          <Route path='/old_mixer'>
-            <OldMixer/>
-          </Route>
+          {pages.map(item => <Route path={item.link}>{item.page} </Route>)}
+         
           <Route path=''>
             <UI />
           </Route>

@@ -3,6 +3,7 @@ import './App.css';
 import {
     Link
   } from "react-router-dom";
+import pages from './pages'
 
 function Tag(props)
 {
@@ -42,21 +43,12 @@ function PostLink(props)
 
 function PostsLinks(props)
 {
-  var posts = [
-    {text: 'Weather NSU app', short:"Small weather app using data from weather.nsu.ru", link:'/weather_nsu', tags: ['Flutter', 'Android']}, 
-    {text: 'Voxel raytracing engine (again?)', short:"Realtime GPU/CPU voxel raytracer", link:'/voxel_mixer', tags: ['C++', 'OpenGL', 'Raytracing', 'Voxels']}, 
-    {text: 'Realtime voxel raytracer', short:"Realtime GPU voxel raytracing engine", link:'/voxel_ray', tags: ['C++', 'OpenGL', 'Raytracing', 'Voxels']}, 
-    {text: 'Mixer 3D', short:"3D engine with raytracing written in C++ and OpenGL", link:'/mixer_3d', tags: ['C++', 'OpenGL', 'Raytracing']},
-    {text: 'Simple 3D engine', short:"Simple 3D engine built only with SDL", link:'/old_mixer', tags: ['C++','SDL', '3D engine']},
-    
-  ];
-
   return (
     <div>
     <h1 style={{ fontFamily: 'Courier New' }}>Posts</h1>
     <table cellPadding="2" >
       <tbody>
-          {posts.map(item => (
+          {pages.map(item => (
             <tr key={item.text}>
                   <td><PostLink info={item}/></td>
             </tr>))}
