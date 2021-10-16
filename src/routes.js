@@ -13,11 +13,15 @@ import VoxelRay from './posts/voxel_ray';
 import Mixer3D from './posts/mixer_3d';
 import OldMixer from './posts/old_mixer';
 import VoxelMixer from './posts/voxel_mixer';
+import WeatherNSU from './posts/weather_nsu';
 
 function Routes() {
   return (
     <Router>
         <Switch>
+          <Route path='/weather_nsu'>
+            <WeatherNSU/>
+          </Route>
           <Route path='/voxel_mixer'>
             <VoxelMixer/>
           </Route>
