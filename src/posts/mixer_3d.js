@@ -37,6 +37,9 @@ function Mixer3D()
                 <div>
                     <img src='post_imgs/art2/a2.jpg'  className='exampleImg'/>
                 </div>
+                <div>
+                    <img src='post_imgs/art2/a5.jpg'  className='exampleImg'/>
+                </div>
             </Carousel>
             <p/>
             <div style={{height:'100px'}}/>

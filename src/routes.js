@@ -12,11 +12,15 @@ import UI from './main';
 import VoxelRay from './posts/voxel_ray';
 import Mixer3D from './posts/mixer_3d';
 import OldMixer from './posts/old_mixer';
+import VoxelMixer from './posts/voxel_mixer';
 
 function Routes() {
   return (
     <Router>
         <Switch>
+          <Route path='/voxel_mixer'>
+            <VoxelMixer/>
+          </Route>
           <Route path='/voxel_ray'>
             <VoxelRay/>
           </Route>

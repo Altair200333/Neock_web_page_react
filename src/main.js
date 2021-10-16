@@ -21,7 +21,7 @@ function PostLink(props)
 
   return (  
       <div onMouseEnter ={() => {setHower(1)}} onMouseLeave={()=>{setHower(0)}}>
-        <div style={{height:"10px"}}>
+        <div style={{height:"10px", width:'500px'}}>
           <Link to = {props.info.link} className="scaleText" style={{fontSize: 20 + hower * 5, color:'#9b00de', fontWeight:'bold'}}>{props.info.text}</Link>
         </div>
         
@@ -43,10 +43,11 @@ function PostLink(props)
 function PostsLinks(props)
 {
   var posts = [
-    {text: 'Realtime voxel raytracer', short:"Realtime GPU voxel raytracing engine", link:'/voxel_ray', tags: ['C++', 'OpenGL', 'Raytracing']}, 
+    {text: 'Voxel raytracing engine (again?)', short:"Realtime GPU/CPU voxel raytracer", link:'/voxel_mixer', tags: ['C++', 'OpenGL', 'Raytracing', 'Voxels']}, 
+    {text: 'Realtime voxel raytracer', short:"Realtime GPU voxel raytracing engine", link:'/voxel_ray', tags: ['C++', 'OpenGL', 'Raytracing', 'Voxels']}, 
     {text: 'Mixer 3D', short:"3D engine with raytracing written in C++ and OpenGL", link:'/mixer_3d', tags: ['C++', 'OpenGL', 'Raytracing']},
     {text: 'Simple 3D engine', short:"Simple 3D engine built only with SDL", link:'/old_mixer', tags: ['C++','SDL', '3D engine']},
-
+    
   ];
 
   return (
