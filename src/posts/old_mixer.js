@@ -15,9 +15,12 @@ function OldMixer()
                 Initially was written as project for C classes at university but it was such a mess that later on I rewrote it to C++ and fixed some bugs.
                 <p/>
                 <img src = 'post_imgs/om1.jpg' className='exampleImg'/>
+                <p/>
+                    <a href='https://github.com/Altair200333/mixer2.0'>source code</a>
+                <p/>
                 <div style={{height:'100px'}}/>
             </div>   
-            </div>
+        </div>
         );
 }
 export default OldMixer;
