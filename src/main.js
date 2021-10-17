@@ -71,7 +71,6 @@ function PostsLinks(props)
 
 function UI()
 {
-  const [count, setCount] = useState(0);
   return (
     <div style={{width:'600px'}}>
       <PostsLinks/>
