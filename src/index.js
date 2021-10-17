@@ -32,7 +32,7 @@ function MainPage()
   document.title = "Mike Petrenko"
   
   return (
-  <div>
+  <div >
     <CenterAll data={<Header/>}/>
 
     <CenterAll data={<Routes/>}/>

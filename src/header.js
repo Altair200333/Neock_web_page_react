@@ -29,7 +29,7 @@ function Header(props)
   ];
 
   return (
-    <table align="center" cellPadding="10" style={{width: "400px"}} >
+    <table align="left" cellPadding="10" style={{width: "400px"}}>
         <tbody>
           <tr>
             <td><h2 style={{ fontFamily: 'Courier New' }}>Ne0ck&nbsp; </h2></td>

@@ -11,7 +11,7 @@ function Tag(props)
 
   return (
     <button className='tagBtn' style={{color:'white', backgroundColor:'#d14fff', padding: hower==0?'4px':'7px', borderRadius: '5px', fontWeight: 'bold'}}
-      onMouseEnter ={() => {setHower(1)}} onMouseLeave={()=>{setHower(0)}}>
+      onMouseEnter ={() => {setHower(1)}} onMouseLeave={()=>{setHower(0)}} onClick={() => {props.setFiler(props.tag)}}>
       {props.tag}
     </button>)
 }
@@ -26,16 +26,16 @@ function PostLink(props)
           <Link to = {props.info.link} className="scaleText" style={{fontSize: 20 + hower * 5, color:'#9b00de', fontWeight:'bold'}}>{props.info.text}</Link>
         </div>
         
-        <p></p>
+        <p/>
 
         <table cellPadding="2">
           <tbody>
             <tr style={{height: '40px'}}>
-              {props.info.tags.map(item => (<td key={item}><Tag tag={item}/></td>))}
+              {props.info.tags.map(item => (<td key={item}><Tag tag={item} setFiler={props.setFiler}/></td>))}
             </tr>
           </tbody>
         </table>
-        <p/>
+
         <div className='description'>{props.info.short}</div>
         <p/>
       </div>);
@@ -43,14 +43,15 @@ function PostLink(props)
 
 function PostsLinks(props)
 {
+  const [filter, setFilter] = useState('');
   return (
     <div>
     <h1 style={{ fontFamily: 'Courier New' }}>Posts</h1>
     <table cellPadding="2" >
       <tbody>
-          {pages.map(item => (
+          {pages.filter(page => filter == '' || page.tags.includes(filter)).map(item => (
             <tr key={item.text}>
-                  <td><PostLink info={item}/></td>
+                  <td><PostLink info={item} setFiler={setFilter}/></td>
             </tr>))}
       </tbody>
     </table>
@@ -62,7 +63,7 @@ function UI()
 {
   const [count, setCount] = useState(0);
   return (
-    <div style={{width:'400px'}}>
+    <div style={{width:'600px'}}>
       <PostsLinks/>
       
     </div>
