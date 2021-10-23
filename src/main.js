@@ -51,6 +51,7 @@ function PostsHead(props)
 }
 function PostsLinks(props)
 {
+
   const [filter, setFilter] = useState('');
   return (
     <div>
@@ -74,7 +75,6 @@ function UI()
   return (
     <div style={{width:'600px'}}>
       <PostsLinks/>
-      
     </div>
   )
 }

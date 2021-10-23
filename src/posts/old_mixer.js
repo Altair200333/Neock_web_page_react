@@ -8,7 +8,7 @@ function OldMixer()
 {
     return (
         <div style={{width:'600px'}}>
-            <h1 className='title'>Simple 3D engine</h1>
+            <h1 className='title PostTitle'>Simple 3D engine</h1>
             <div className='postText'>
                 Custom simple 3D engine. All internal math magic is made from scratch in a way that there are no matricies (like in normal graphic API's).
                 <p/>

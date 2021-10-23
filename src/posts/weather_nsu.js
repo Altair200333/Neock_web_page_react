@@ -8,7 +8,7 @@ function WeatherNSU()
 {
     return (
         <div style={{width:'600px'}}>
-            <h1 className='title'>Weather NSU</h1>
+            <h1 className='title PostTitle'>Weather NSU</h1>
             <div className='postText'>
                 Small App with home screen widget that shows temperature near NSU
                 <p/>

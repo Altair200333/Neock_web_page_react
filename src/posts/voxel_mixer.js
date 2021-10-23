@@ -14,7 +14,7 @@ function VoxelMixer()
 {
     return (
     <div style={{width:'600px'}}>
-        <h1 className='title'>Yet another voxel raytracer</h1>
+        <h1 className='title PostTitle'>Yet another voxel raytracer</h1>
         <div className='postText'>
             While on the surface this may look similar to the last project, the internals of this programm are very different
         </div>

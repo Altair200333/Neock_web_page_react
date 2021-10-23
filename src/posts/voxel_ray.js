@@ -8,7 +8,7 @@ function VoxelRay()
 {
     return (
     <div style={{width:'600px'}}>
-        <h1 className='title'>Realtime voxel raytracer</h1>
+        <h1 className='title PostTitle'>Realtime voxel raytracer</h1>
         <div className='postText'>
             Real-time voxel ray tracing engine. Supports 3 types of materials such as: glass,
             mirror and diffuse colored block. Models can be imported from MagicaVoxel in .ply format

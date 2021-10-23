@@ -7,7 +7,7 @@ function Mixer3D()
 {
     return (
         <div style={{width:'600px'}}>
-            <h1 className='title'>Mixer 3D</h1>
+            <h1 className='title PostTitle'>Mixer 3D</h1>
             <div className='postText'>
                 Mixer3D is a 3D engine with raytracing written with C++ and OpenGL. It has been made as final project for C++ course at NSU.
                 <p/>

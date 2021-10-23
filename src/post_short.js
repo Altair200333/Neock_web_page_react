@@ -25,7 +25,7 @@ function PostLink(props)
   return (  
       <div onMouseEnter ={() => {setHower(1)}} onMouseLeave={()=>{setHower(0)}}>
         <div style={{height:"10px", width:'500px'}}>
-          <Link to = {props.info.link} className="scaleText" style={{fontSize: 20 + hower * 5, color:'#8a2be2', fontWeight:'bold'}}>{props.info.text}</Link>
+          <Link to = {props.info.link} className="scaleText PostTitle" style={{fontSize: 20 + hower * 5, fontWeight:'bold'}}>{props.info.text}</Link>
         </div>
         
         <p/>

@@ -62,3 +62,7 @@ a{
 .commonColor{
   background-color: #8a2be2;
 }
+
+.icon {
+  vertical-align: top;
+}
