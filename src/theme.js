@@ -4,6 +4,7 @@ export const lightTheme = {
     toggleBorder: '#FFF',
     gradient: 'linear-gradient(#39598A, #79D7ED)',
     title: '#8a2be2',
+    headerLinkFilter: 'invert(0)',
   }
   
   export const darkTheme = {
@@ -12,4 +13,5 @@ export const lightTheme = {
     toggleBorder: '#6B8096',
     gradient: 'linear-gradient(#091236, #1E215D)',
     title: '#FFF',
+    headerLinkFilter: 'invert(1)',
   }

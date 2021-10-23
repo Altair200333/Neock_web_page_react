@@ -12,8 +12,7 @@ function ImageLink(props)
       <a href={props.link}>
         <img className="backImage" src='./none.png' style={{height:baseW}}/>
 
-        <img className="linkImage" src = {props.src} style={{height:hower==0?baseW:scaledW}}
-            ></img>
+        <img color='red' className="linkImage linkSvg" src = {props.src} style={{height:hower==0?baseW:scaledW}}></img>
       </a>
     </div>);
 }

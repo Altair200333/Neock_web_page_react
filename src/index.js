@@ -77,7 +77,7 @@ function MainPage()
           <td style={{width: '100px'}}/>
           <td>
             <Switch onChange={toggleTheme} checked={themeState == 'light' ? false : true} onColor='#d9d9d9' offColor='#58555A'
-              onHandleColor = '#58555A' offHandleColor='#d9d9d9'
+              onHandleColor = '#575757' offHandleColor='#d9d9d9'
               checkedIcon={ <SwitchIcon icon={<IoSunnyOutline size='22px' color='black'/>}/>}
               uncheckedIcon={ <SwitchIcon icon={<BsMoon size='20px' color='white'/>}/>}/>
           </td>

@@ -20,9 +20,12 @@ export const GlobalStyles = createGlobalStyle`
     transition: all 0.25s linear;
   }
   .PostTitle{
-    color: ${({ theme }) => theme.title}
+    color: ${({ theme }) => theme.title};
   }
   a{
-    color: ${({ theme }) => theme.title}
+    color: ${({ theme }) => theme.title};
+  }
+  .linkSvg{
+    filter: ${({ theme }) => theme.headerLinkFilter};
   }
   `;
