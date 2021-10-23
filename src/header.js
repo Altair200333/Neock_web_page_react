@@ -8,8 +8,8 @@ function ImageLink(props)
   var baseW = "40px";
   var scaledW = "25px";
   return (
-    <div  className="imageStack">
-      <a href={props.link} onMouseEnter ={() => {setHower(1)}} onMouseLeave={()=>{setHower(0)}}>
+    <div className="imageStack"  onMouseEnter ={() => {setHower(1)}} onMouseLeave={()=>{setHower(0)}}>
+      <a href={props.link}>
         <img className="backImage" src='./none.png' style={{height:baseW}}/>
 
         <img className="linkImage" src = {props.src} style={{height:hower==0?baseW:scaledW}}

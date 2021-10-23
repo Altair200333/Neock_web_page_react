@@ -19,7 +19,7 @@ function TagFilter(props)
             </button>
           </td>
           <td>
-            <div style={{color:'white', backgroundColor:'#d14fff', padding: '4px', borderRadius: '5px', fontWeight: 'bold'}}>
+            <div style={{color:'white', backgroundColor:'#8a2be2', padding: '4px', borderRadius: '5px', fontWeight: 'bold'}}>
               {props.filter == '' ?  '...' : props.filter}
             </div>
           </td>
