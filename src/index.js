@@ -14,6 +14,7 @@ import { BsMoon } from "react-icons/bs";
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './theme';
 import { GlobalStyles } from './global';
+import {setToLS, getFromLS} from './storage'
 
 import {
   BrowserRouter as Router,
@@ -50,16 +51,17 @@ function SwitchIcon(props)
 function MainPage()
 {
   document.title = "Mike Petrenko"
-  const [themeState, setThemeState] = useState('dark');
+
+  const localTheme = getFromLS('theme');
+  var currentTheme = localTheme ? localTheme : 'dark';
+
+  const [themeState, setThemeState] = useState(currentTheme);
 
   const toggleTheme = () => {
     // if the theme is not light, then set it to dark
-    if (themeState === 'light') {
-      setThemeState('dark');
-    // otherwise, it should be light
-    } else {
-      setThemeState('light');
-    }
+    var themeToSet = themeState === 'light' ? 'dark' : 'light';
+    setThemeState(themeToSet);
+    setToLS('theme', themeToSet);
   }
 
   return (
