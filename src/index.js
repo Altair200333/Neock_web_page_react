@@ -28,7 +28,7 @@ import {
 function CenterAll(props)
 {
   return (
-  <div style= {{display: 'flex', alignItems: 'center', justifyContent: 'center', }}> 
+  <div className='CenterAll'> 
     {props.data}
   </div>)
 }
@@ -68,6 +68,7 @@ function MainPage()
     <GlobalStyles />
 
     <CenterAll data={
+      <div>
       <table>
       <tbody>
         <tr>
@@ -75,7 +76,7 @@ function MainPage()
             <Header/>
           </td>
           <td style={{width: '100px'}}/>
-          <td>
+          <td style={{paddingTop:'15px'}}>
             <Switch onChange={toggleTheme} checked={themeState == 'light' ? false : true} onColor='#d9d9d9' offColor='#58555A'
               onHandleColor = '#575757' offHandleColor='#d9d9d9'
               checkedIcon={ <SwitchIcon icon={<IoSunnyOutline size='22px' color='black'/>}/>}
@@ -84,11 +85,12 @@ function MainPage()
         </tr>
       </tbody>
     </table>
+    <Routes/>
+    </div>
     }/>
     
     
 
-    <CenterAll data={<Routes/>}/>
     </>
   </ThemeProvider>)
 }
